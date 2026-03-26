@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wholesale — The Ghee Project</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Wholesale ghee supplier Sydney — small batch, additive-free ghee for restaurants, cafes and food businesses. Trade enquiries welcome." />
+  <meta property="og:title" content="The Ghee Project — Wholesale &amp; Trade" />
+  <meta property="og:description" content="Wholesale ghee for Sydney restaurants and food businesses. Small batch, locally sourced, pure." />
+  <meta property="og:image" content="/assets/images/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://thegeeproject.com.au/wholesale.html" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* Page hero */
+    .page-hero {
+      background: var(--dark);
+      padding: 10rem 7rem 7rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,136,42,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero .breadcrumb {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: rgba(254,252,248,0.4);
+      margin-bottom: 2rem;
+    }
+    .page-hero .breadcrumb a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .page-hero .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero .section-eyebrow { color: var(--gold); }
+    .page-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+    .page-hero-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(254,252,248,0.6);
+      max-width: 540px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .page-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Why section */
+    .why-section {
+      background: var(--cream);
+      padding: 7rem 7rem;
+    }
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .why-header {
+      max-width: 600px;
+      margin-bottom: 4rem;
+    }
+    .why-header .section-eyebrow { color: var(--gold); }
+    .why-header .section-title { color: var(--dark); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .why-card {
+      padding: 2.5rem;
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+    }
+    .why-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .why-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+    .why-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* Product range table */
+    .range-section {
+      background: var(--dark);
+      padding: 7rem 7rem;
+    }
+    .range-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .range-header {
+      margin-bottom: 3.5rem;
+    }
+    .range-header .section-eyebrow { color: var(--gold); }
+    .range-header .section-title { color: var(--white); }
+    .range-header .section-intro { color: rgba(254,252,248,0.55); margin-top: 0.5rem; }
+
+    .product-range-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .product-range-table th {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid rgba(200,136,42,0.3);
+      text-align: left;
+    }
+    .product-range-table td {
+      font-size: 0.95rem;
+      color: rgba(254,252,248,0.7);
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+    }
+    .product-range-table tr:last-child td { border-bottom: none; }
+    .product-range-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .product-range-table .variant-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .product-range-table td.price-cell {
+      color: var(--gold-lt);
+      font-weight: 600;
+    }
+    .range-note {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(254,252,248,0.35);
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    /* Testimonials / social proof band */
+    .social-proof {
+      background: var(--mid);
+      padding: 5rem 7rem;
+    }
+    .social-proof-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .social-proof .section-eyebrow { color: var(--gold); }
+    .proof-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .proof-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: rgba(254,252,248,0.3);
+    }
+    .proof-quote {
+      max-width: 640px;
+      margin: 3rem auto 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: rgba(254,252,248,0.65);
+      line-height: 1.6;
+    }
+    .proof-quote::before { content: '\201C'; color: var(--gold); margin-right: 0.1em; }
+    .proof-quote::after  { content: '\201D'; color: var(--gold); margin-left: 0.1em; }
+    .proof-attribution {
+      margin-top: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+    }
+
+    /* How it works */
+    .how-it-works {
+      background: var(--cream-dk);
+      padding: 7rem 7rem;
+    }
+    .how-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .how-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .how-header .section-eyebrow { color: var(--gold); }
+    .how-header .section-title { color: var(--dark); }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .how-step {
+      text-align: center;
+      padding: 2rem;
+    }
+    .how-step-icon {
+      width: 4rem;
+      height: 4rem;
+      background: var(--dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      color: var(--gold);
+    }
+    .how-step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.6rem;
+    }
+    .how-step-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--cream);
+      padding: 7rem 7rem;
+    }
+    .faq-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .faq-sidebar .section-eyebrow { color: var(--gold); }
+    .faq-sidebar .section-title { color: var(--dark); }
+    .faq-sidebar .section-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    .faq-list { list-style: none; }
+    .faq-item {
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--dark);
+      text-align: left;
+      gap: 1rem;
+    }
+    .faq-question:hover { color: var(--amber); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      color: var(--gold);
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 0 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* Wholesale contact form */
+    .wholesale-contact {
+      background: var(--dark);
+      padding: 8rem 7rem;
+    }
+    .wholesale-contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .wc-info .section-eyebrow { color: var(--gold); }
+    .wc-info .section-title { color: var(--white); }
+    .wc-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: rgba(254,252,248,0.6);
+      line-height: 1.75;
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .wc-detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .wc-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(254,252,248,0.55);
+      line-height: 1.6;
+    }
+    .wc-detail svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .wc-form-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 3rem;
+    }
+    .wc-form-wrap h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .wc-form-wrap .form-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(254,252,248,0.4);
+      margin-bottom: 2rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(254,252,248,0.45);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      border-radius: 2px;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select option { background: var(--dark); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-status {
+      margin-top: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+    }
+    .form-status--success { background: rgba(74,140,44,0.15); color: #7ec85a; }
+    .form-status--error   { background: rgba(200,40,40,0.15);  color: #e57070; }
+    .form-status--warn    { background: rgba(200,136,42,0.15); color: var(--gold-lt); }
+
+    /* Footer */
+    .footer {
+      background: #0e0400;
+      padding: 5rem 7rem 3rem;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(200,136,42,0.15);
+    }
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold-lt);
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(254,252,248,0.4);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(254,252,248,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold-lt); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(254,252,248,0.25);
+    }
+    .footer-social { display: flex; gap: 1rem; }
+    .footer-social a { color: rgba(254,252,248,0.3); transition: color 0.2s; }
+    .footer-social a:hover { color: var(--gold); }
+
+    /* Scroll-to-top */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 800;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      border-radius: 7px;
+    }
+    .scroll-top.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .page-hero { padding: 8rem 1.5rem 4rem; }
+      .why-section, .range-section, .social-proof, .how-it-works,
+      .faq-section, .wholesale-contact { padding: 5rem 1.5rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr 1fr; }
+      .faq-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wholesale-contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .wc-form-wrap { padding: 2rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer { padding: 4rem 1.5rem 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .how-steps { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="The Ghee Project — home">
+      <svg width="180" height="32" viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="3" y="22" font-family="Playfair Display, serif" font-size="18" font-weight="700" fill="currentColor">The Ghee Project</text>
+      </svg>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#about">Our Story</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="wholesale.html" class="active">Wholesale</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#wholesale-form" class="nav-cta">Trade Enquiry</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════════ -->
+<section class="page-hero" aria-label="Wholesale — hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> &rsaquo; Wholesale
+    </nav>
+    <p class="section-eyebrow">For Restaurants &amp; Food Businesses</p>
+    <h1 class="page-hero-title fade-up">
+      Supply your kitchen with ghee you can trust.
+    </h1>
+    <p class="page-hero-body fade-up" style="transition-delay:0.1s">
+      We supply Sydney restaurants, cafes, and food businesses with small batch,
+      additive-free ghee — in the quantities your kitchen needs, from a supplier
+      who takes quality as seriously as you do.
+    </p>
+    <div class="page-hero-ctas fade-up" style="transition-delay:0.2s">
+      <a href="#wholesale-form" class="btn-primary">Start a Trade Enquiry</a>
+      <a href="#range" class="btn-ghost">See the Range</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHY THE GHEE PROJECT
+═══════════════════════════════════════ -->
+<section class="why-section" aria-label="Why choose The Ghee Project for trade">
+  <div class="why-inner">
+    <div class="why-header fade-up">
+      <p class="section-eyebrow">Why Trade with Us</p>
+      <h2 class="section-title">What sets our ghee apart for professional kitchens.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-number">100%</div>
+        <h3 class="why-title">Additive-free — always</h3>
+        <p class="why-desc">
+          No preservatives, no emulsifiers, no colourants. Your menu can reference
+          locally sourced, pure ghee with total confidence. Every batch, every time.
+        </p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:0.1s">
+        <div class="why-number">NSW</div>
+        <h3 class="why-title">Locally sourced dairy</h3>
+        <p class="why-desc">
+          Our butter comes from NSW farms — making The Ghee Project a genuinely
+          local story your team can tell at the table without any creative licence.
+        </p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:0.2s">
+        <div class="why-number">SYD</div>
+        <h3 class="why-title">Small batch, consistent quality</h3>
+        <p class="why-desc">
+          We don't produce to a price. We produce to a standard. Your kitchen
+          gets the same colour, taste, and texture in every order.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PRODUCT RANGE TABLE
+═══════════════════════════════════════ -->
+<section class="range-section" id="range" aria-label="Wholesale product range">
+  <div class="range-inner">
+    <div class="range-header fade-up">
+      <p class="section-eyebrow">The Range</p>
+      <h2 class="section-title" style="color:var(--white)">Available for trade supply.</h2>
+      <p class="section-intro">All four variants are available for wholesale. Pricing and minimum quantities on application.</p>
+    </div>
+
+    <div class="fade-up" style="overflow-x:auto">
+      <table class="product-range-table" aria-label="Wholesale product range table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Variant type</th>
+            <th>Key use cases</th>
+            <th>Trade price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="variant-dot" style="background:#C8882A"></span>
+              Original Pure Ghee
+            </td>
+            <td>Pure / unflavoured</td>
+            <td>High-heat cooking, finishing, roti, curries, dal, all-purpose</td>
+            <td class="price-cell">[TBD] — enquire</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="variant-dot" style="background:#D4A843"></span>
+              Garlic Ghee
+            </td>
+            <td>Flavoured</td>
+            <td>Naan, roasted vegetables, rice, sauté base, finishing drizzle</td>
+            <td class="price-cell">[TBD] — enquire</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="variant-dot" style="background:#8B7332"></span>
+              Fenugreek Ghee
+            </td>
+            <td>Flavoured</td>
+            <td>Dal, North Indian curries, tadka, traditional preparations</td>
+            <td class="price-cell">[TBD] — enquire</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="variant-dot" style="background:#4A8C2C"></span>
+              Curry Leaves Ghee
+            </td>
+            <td>Flavoured</td>
+            <td>South Indian curries, rice dishes, finishing touch, tadka</td>
+            <td class="price-cell">[TBD] — enquire</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="range-note">
+      Trade jar sizes and catering/bulk quantities are available on request. Pricing is confirmed on enquiry — all prices ex-GST.
+      Minimum order quantity applies; please ask when you get in touch.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════ -->
+<section class="how-it-works" aria-label="How the wholesale process works">
+  <div class="how-inner">
+    <div class="how-header fade-up">
+      <p class="section-eyebrow">The Process</p>
+      <h2 class="section-title">Getting set up is simple.</h2>
+    </div>
+    <div class="how-steps">
+      <div class="how-step fade-up">
+        <div class="how-step-icon">
+          <!-- Envelope -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+        </div>
+        <h3 class="how-step-title">Send an enquiry</h3>
+        <p class="how-step-desc">Fill out the form below. Tell us about your kitchen, what you need, and roughly how much.</p>
+      </div>
+      <div class="how-step fade-up" style="transition-delay:0.1s">
+        <div class="how-step-icon">
+          <!-- Chat bubble -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3 class="how-step-title">We'll be in touch</h3>
+        <p class="how-step-desc">One of the founders will reach out directly — usually within 24 hours — to discuss your needs.</p>
+      </div>
+      <div class="how-step fade-up" style="transition-delay:0.2s">
+        <div class="how-step-icon">
+          <!-- Package -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/>
+            <path d="M23 7H1l2-4h18z"/>
+            <line x1="12" y1="22" x2="12" y2="7"/>
+          </svg>
+        </div>
+        <h3 class="how-step-title">First order &amp; sample</h3>
+        <p class="how-step-desc">We can arrange a sample set before your first order if you'd like to try all variants in your kitchen.</p>
+      </div>
+      <div class="how-step fade-up" style="transition-delay:0.3s">
+        <div class="how-step-icon">
+          <!-- Repeat / ongoing -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 1l4 4-4 4"/>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+            <path d="M7 23l-4-4 4-4"/>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+          </svg>
+        </div>
+        <h3 class="how-step-title">Ongoing supply</h3>
+        <p class="how-step-desc">We'll set you up on a regular supply schedule that fits your ordering rhythm. No hassle, no guesswork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+═══════════════════════════════════════ -->
+<section class="faq-section" id="faq" aria-label="Wholesale frequently asked questions">
+  <div class="faq-inner">
+    <div class="faq-sidebar fade-up">
+      <p class="section-eyebrow">Trade FAQ</p>
+      <h2 class="section-title">Common questions.</h2>
+      <p class="section-body">
+        Can't find your answer here? Email us directly at
+        <a href="mailto:wholesale@thegeeproject.com.au" style="color:var(--gold)">wholesale@thegeeproject.com.au</a>
+      </p>
+      <a href="#wholesale-form" class="btn-primary" style="display:inline-block">
+        Send a Trade Enquiry
+      </a>
+    </div>
+
+    <ul class="faq-list fade-up" style="transition-delay:0.1s" aria-label="Frequently asked questions">
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is the minimum order quantity?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Minimum order quantities are confirmed during your first conversation with us — they're designed to be practical and reasonable for a working kitchen. We're a small operation, so we'll work with you to find an arrangement that makes sense. Get in touch and we'll talk it through.
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can we order a sample before committing?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Yes — we can arrange a sample set of all four variants so your kitchen can try them before placing your first wholesale order. Let us know when you enquire and we'll sort that out as part of the onboarding process.
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What sizes are available for trade?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Trade jar and bulk sizes are currently being finalised. We offer a range appropriate for commercial kitchen use — from individual jars to larger catering containers. Please enquire and we'll confirm current availability and lead times.
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you deliver to restaurants, or do we collect?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            For Sydney-based accounts we offer direct delivery, subject to your location and order size. Delivery arrangements are confirmed when we set up your account. We aim to make the logistics as simple as possible for your kitchen.
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What does "additive-free" actually mean?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Our ghee contains butter — and for flavoured variants, one whole spice or herb. That is the complete ingredient list. No preservatives, no anti-caking agents, no colourants, no emulsifiers. Nothing to improve shelf life at the cost of purity. You can put our ingredient label on your menu or include it in your allergen information with complete confidence.
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Are invoices GST-inclusive?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            B2B trade invoices are issued ex-GST with a GST line item shown separately — standard practice for wholesale food supply in Australia. Full tax invoices are provided with every order for your accounting records.
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHOLESALE CONTACT FORM
+═══════════════════════════════════════ -->
+<section class="wholesale-contact" id="wholesale-form" aria-label="Wholesale enquiry form">
+  <div class="wholesale-contact-inner">
+    <div class="wc-info fade-up">
+      <p class="section-eyebrow">Trade Enquiries</p>
+      <h2 class="section-title">Start the conversation.</h2>
+      <p class="wc-body">
+        Tell us about your kitchen and what you're looking for.
+        One of the founders will be back to you within 24 hours.
+        No automated responses, no sales funnels — just a real conversation.
+      </p>
+      <div class="wc-detail-list">
+        <div class="wc-detail">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+          <span><a href="mailto:wholesale@thegeeproject.com.au" style="color:var(--gold-lt)">wholesale@thegeeproject.com.au</a><br>Preferred for trade enquiries</span>
+        </div>
+        <div class="wc-detail">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          <span>We respond within 24 hours, Monday – Saturday.</span>
+        </div>
+        <div class="wc-detail">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/>
+          </svg>
+          <span>Sydney-based delivery available.<br>Interstate supply on request.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wc-form-wrap fade-up" style="transition-delay:0.15s">
+      <h3>Trade enquiry form</h3>
+      <p class="form-subtitle">Prices and availability confirmed by a founder directly.</p>
+
+      <form
+        id="wholesale-enquiry-form"
+        method="POST"
+        data-script-url="https://script.google.com/macros/s/AKfycbwek6bg1MLHWLfEgxKfm1FkD8zPGmKn8tmEthsHiQLjn8LI6Q7hsJdsxZPHlEvFyZGa/exec"
+        novalidate
+      >
+        <input type="hidden" name="form_type" value="wholesale_enquiry" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ws-name">Contact name</label>
+            <input type="text" id="ws-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="ws-business">Business name</label>
+            <input type="text" id="ws-business" name="business" placeholder="Restaurant / café name" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ws-email">Email</label>
+            <input type="email" id="ws-email" name="email" placeholder="you@yourkitchen.com.au" required />
+          </div>
+          <div class="form-group">
+            <label for="ws-phone">Phone (optional)</label>
+            <input type="tel" id="ws-phone" name="phone" placeholder="0400 000 000" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ws-type">Business type</label>
+          <select id="ws-type" name="business_type">
+            <option value="">Select…</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="cafe">Café</option>
+            <option value="catering">Catering company</option>
+            <option value="deli">Deli / grocery</option>
+            <option value="meal-prep">Meal prep / food service</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ws-products">Products of interest</label>
+          <select id="ws-products" name="products">
+            <option value="">Select…</option>
+            <option value="original">Original Pure Ghee</option>
+            <option value="garlic">Garlic Ghee</option>
+            <option value="fenugreek">Fenugreek Ghee</option>
+            <option value="curry">Curry Leaves Ghee</option>
+            <option value="multiple">Multiple variants</option>
+            <option value="all">All variants</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ws-volume">Estimated monthly volume</label>
+          <select id="ws-volume" name="estimated_volume">
+            <option value="">Not sure yet — happy to discuss</option>
+            <option value="small">Small — under 5kg/month</option>
+            <option value="medium">Medium — 5–20kg/month</option>
+            <option value="large">Large — 20kg+/month</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ws-message">Anything else we should know</label>
+          <textarea id="ws-message" name="message" placeholder="Tell us about your kitchen, your menu, or any specific requirements…"></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="btn-primary"
+          data-label="Send Trade Enquiry"
+          style="width:100%;"
+        >
+          Send Trade Enquiry
+        </button>
+        <div class="form-status" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">The Ghee Project</p>
+        <p class="footer-brand-tagline">
+          Small batch, additive-free ghee from locally sourced NSW dairy.
+          Made in Sydney for kitchens that care.
+        </p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html#about">Our Story</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Shop &amp; Trade</p>
+        <ul class="footer-links" role="list">
+          <li><a href="shop.html">Shop Online</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
+          <li><a href="#faq">Trade FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links" role="list">
+          <li><a href="mailto:hello@thegeeproject.com.au">hello@thegeeproject.com.au</a></li>
+          <li><a href="mailto:wholesale@thegeeproject.com.au">wholesale@thegeeproject.com.au</a></li>
+          <li><a href="https://instagram.com/thegeeproject" target="_blank" rel="noopener noreferrer">@thegeeproject</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 The Ghee Project. Sydney, NSW, Australia. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/thegeeproject" target="_blank" rel="noopener noreferrer" aria-label="The Ghee Project on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
