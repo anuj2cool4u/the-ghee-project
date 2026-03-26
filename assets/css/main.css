@@ -201,8 +201,14 @@ section { position: relative; overflow: hidden; }
   color: var(--gold-lt);
   letter-spacing: 0.02em;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 .nav-logo span { color: var(--white); font-weight: 400; }
+.nav-logo-icon { flex-shrink: 0; }
+.nav-logo-wordmark { flex-shrink: 0; }
 
 .nav-links {
   display: flex;

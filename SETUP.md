@@ -57,7 +57,7 @@ Connect the website's order and enquiry forms to Google Sheets + email notificat
 
 // ── CONFIG ───────────────────────────────────────────────────────────────────
 
-const NOTIFICATION_EMAIL = 'hello@thegeeproject.com.au'; // ← change to your email
+const NOTIFICATION_EMAIL = 'anujchopra30@gmail.com'; // ← change to your email
 const SHEET_NAME         = 'enquiries';
 
 // ── MAIN POST HANDLER ────────────────────────────────────────────────────────
