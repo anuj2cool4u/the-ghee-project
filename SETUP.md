@@ -106,12 +106,18 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
-  // Step 2: send email notification (non-fatal — sheet row is already saved)
+  // Step 2: send email notification to founders (non-fatal)
   try {
     sendNotification(data);
   } catch (mailErr) {
-    // Don't fail the whole request — just log it
     logErrorToSheet('MAIL ERROR (row was saved): ' + mailErr.message);
+  }
+
+  // Step 3: send auto-reply confirmation to the enquirer (non-fatal)
+  try {
+    sendAutoReply(data);
+  } catch (replyErr) {
+    logErrorToSheet('AUTO-REPLY ERROR (row was saved): ' + replyErr.message);
   }
 
   return ContentService
@@ -291,6 +297,88 @@ function sendNotification(data) {
   MailApp.sendEmail(NOTIFICATION_EMAIL, subject, lines.join('\n'), mailOptions);
 }
 
+// ── AUTO-REPLY TO ENQUIRER ───────────────────────────────────────────────────
+
+function sendAutoReply(data) {
+  // Only send if we have a valid email address
+  if (!data['email'] || !data['email'].includes('@')) return;
+
+  const firstName = (data['name'] || 'there').split(' ')[0];
+  const formType  = data['form_type'] || 'contact';
+
+  // Tailor subject + body copy by form type
+  const config = {
+    wholesale_enquiry: {
+      subject:     'We got your wholesale enquiry — The Ghee Project',
+      heading:     'Thanks for reaching out, ' + firstName + '.',
+      body:        'We\'ve received your trade enquiry and one of our team will be in touch within 1–2 business days to discuss your requirements.',
+      footer:      'In the meantime, feel free to reply to this email with any questions.',
+    },
+    shop_order: {
+      subject:     'We got your order enquiry — The Ghee Project',
+      heading:     'Thanks for your interest, ' + firstName + '.',
+      body:        'We\'ve received your order enquiry and will be in touch shortly to confirm availability and next steps.',
+      footer:      'If you need anything urgently, just reply to this email.',
+    },
+    contact: {
+      subject:     'We got your message — The Ghee Project',
+      heading:     'Thanks for getting in touch, ' + firstName + '.',
+      body:        'We\'ve received your message and will get back to you within 1–2 business days.',
+      footer:      'In the meantime, feel free to reply if you have anything to add.',
+    },
+  };
+
+  const c = config[formType] || config['contact'];
+
+  // ── Plain text ──
+  const plainText = [
+    c.heading,
+    '',
+    c.body,
+    '',
+    c.footer,
+    '',
+    '────────────────────────────',
+    'The Ghee Project',
+    'Small Batch. Pure. Local.',
+    'hello@thegeeproject.com.au',
+    'thegeeproject.com.au',
+    '────────────────────────────',
+    '',
+    'This is an automated confirmation — your message has been logged and a real person will follow up.',
+  ].join('\n');
+
+  // ── HTML ──
+  const htmlBody =
+    '<div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;background:#FAF3E4">' +
+      '<div style="background:#1A0900;padding:24px 32px">' +
+        '<p style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#E5AB50;margin:0">The Ghee Project</p>' +
+        '<p style="font-size:11px;color:rgba(254,252,248,0.45);margin:5px 0 0;letter-spacing:0.14em;text-transform:uppercase">Small Batch. Pure. Local.</p>' +
+      '</div>' +
+      '<div style="padding:32px">' +
+        '<h2 style="font-family:Georgia,serif;font-size:19px;color:#1A0900;margin:0 0 12px">' + c.heading + '</h2>' +
+        '<p style="font-size:15px;color:#3D1A00;line-height:1.7;margin:0 0 12px">' + c.body + '</p>' +
+        '<p style="font-size:15px;color:#3D1A00;line-height:1.7;margin:0 0 28px">' + c.footer + '</p>' +
+        '<div style="border-top:1px solid #F0E4C7;padding-top:20px">' +
+          '<p style="font-size:13px;color:#8A6840;margin:0;line-height:1.6">' +
+            '<strong style="color:#1A0900">The Ghee Project</strong><br>' +
+            'Sydney, NSW, Australia<br>' +
+            '<a href="mailto:hello@thegeeproject.com.au" style="color:#C8882A;text-decoration:none">hello@thegeeproject.com.au</a>' +
+          '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background:#F0E4C7;padding:12px 32px">' +
+        '<p style="font-size:11px;color:#8A6840;margin:0">This is an automated confirmation. A real person will follow up shortly.</p>' +
+      '</div>' +
+    '</div>';
+
+  MailApp.sendEmail(data['email'], c.subject, plainText, {
+    name:     'The Ghee Project',
+    htmlBody: htmlBody,
+    replyTo:  NOTIFICATION_EMAIL,
+  });
+}
+
 // ── HELPERS ──────────────────────────────────────────────────────────────────
 
 function buildHeaders(data) {
@@ -389,7 +477,12 @@ function testSubmission() {
   };
 
   doPost(fakeEvent);
-  Logger.log('testSubmission complete — check the "enquiries" sheet and inbox at: ' + NOTIFICATION_EMAIL);
+  Logger.log(
+    'testSubmission complete.\n' +
+    '1. Check the "enquiries" sheet for a new row.\n' +
+    '2. Check ' + NOTIFICATION_EMAIL + ' for the founder notification email.\n' +
+    '3. Check the same inbox for the auto-reply confirmation (it sends to the email field, which is also NOTIFICATION_EMAIL in this test).'
+  );
 }
 ```
 
